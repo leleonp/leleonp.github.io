@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your GitHub Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            flex-direction: column;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #0077b5; /* LinkedIn color as an example */
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    
+<header>
+    <div class="level-item has-text-left" style="display: flex; flex-direction: column; align-items: center;">
+        <figure class="image" style="width: 100px; height: 100px; margin-bottom: 10px;">
+            <img src="img/profile_picture.jpeg" style="width: 100%; height: 100%; border-radius: 50px;">
+        </figure>
+        <div style="text-align: center;">
+            <h1>Luis E. León Ph.D.</h1>
+            <h2>Computational biologist <br> Bioinformatician <br>Data Scientist</h2>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <a href="./index.html" class="active">home</a>
+    <a href="./education.html">Education</a>
+    <a href="./experience.html">Experience</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./skills.html">Skills</a>
+    <a href="./contact.html">Contact</a>
+</nav>
+
+        
+<div class="contact-container">
+    <h2>Contact Me</h2>
+    <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">
+            <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/leleonp" target="_blank">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ozDiSGJlUqI6815cRlJiNAHaHa%26pid%3DApi&f=1&ipt=9d170e569c8a42ac99265e13397a742bc331bb473f16a066e1900d71a66696bc&ipo=images" alt="LinkedIn">
+        </a>
+        <a href="mailto:luisleon22@gmail.com" target="_blank">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.loCwsn7u3iAGhlFClCumdgHaHa%26pid%3DApi&f=1&ipt=407b5200bb7b19f51504f84f51860fa4cb7609d323c4730cc6efef01f40dc83b&ipo=images" alt="Email">
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Luis E. León | <a href="https://github.com/your-username">GitHub</a></p>
+</footer>
+
+</body>
+</html>
