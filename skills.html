@@ -5,8 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your GitHub Page</title>
+    <title>leleonp.github.io</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .soft_skills {
+            margin: 20px 20px 20px 20px;
+        }
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90px;
+        }
+        ul {
+            list-style-type: none; /* Remove default bullets */
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     
@@ -24,52 +53,144 @@
 
 <nav class="navbar">
     <a href="./index.html" class="active">home</a>
-    <a href="./about.html">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="./education.html">Education</a>
+    <a href="./experience.html">Experience</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./skills.html">Skills</a>
+    <a href="./projects.html">Projects</a>
+    <a href="./contact.html">Contact</a>
 </nav>
 
+<h2> Soft skills </h2>
+<div class="soft_skills" style="text-align: justify;">
+    <ul style="list-style-type: none;">
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Effective communication:</b> Ability to convey scientific results and complex concepts clearly and accurately to
+            both technical and non-technical audiences, fostering a comprehensive understanding of laboratory objectives and
+            advancements.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Teamwork:</b> Experience collaborating with interdisciplinary teams, promoting an inclusive and respectful environment
+            to maximize efficiency in scientific and operational projects.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Leadership and project management:</b> Proven competence in leading scientific teams, efficiently allocating re-
+            sources and tasks to ensure deadlines and strategic objectives are met.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Problem-solving:</b> Analytical and evidence-based approach to identifying and addressing experimental challenges,
+            proposing innovative solutions to optimize processes and outcomes.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Adaptability:</b>  Ability to effectively respond to changes in priorities, adjusting plans and strategies to ensure success
+            in dynamic and demanding environments.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Strategic thinking:</b>  Experience integrating scientific knowledge into experiment planning and laboratory manage-
+            ment, aligning scientific activities with organizational and quality objectives.
+        </li>
+        <li><span style="color: #3182bd; font-size: 1.5em; vertical-align: middle;">●</span>
+            <b>Training and mentoring:</b> Skill in training and guiding technical and operational teams, promoting professional
+            development and encouraging the adoption of good scientific and regulatory practices.
+        </li>
+    </ul>
+</div>
+
+<br>
+</br>
+<h2> Technical skills </h2>
 
 <h3>Programming Skills</h3>
 <div class="skills">
     <div class="skill">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="50" alt="Python">
+        <img src="./img/programming/python.jpeg" width="50" alt="Python">
         <span>Python</span>
     </div>
     <div class="skill">
-        <img src="https://www.r-project.org/logo/Rlogo.png" alt="R">
+        <img src="./img/programming/r.jpeg" alt="R">
         <span>R</span>
     </div>
     <div class="skill">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
-        <span>JavaScript</span>
+        <img src="./img/programming/nextflow.png" alt="nextflow">
+        <span>Nextflow</span>
     </div>
     <div class="skill">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-        <span>CSS</span>
+        <img src="./img/programming/bash.png" alt="bash">
+        <span>Bash</span>
     </div>
 </div>
 
-<h3>Tech Skills</h3>
+<h3>Data Management and Databases</h3>
 <div class="skills">
     <div class="skill">
-        <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/aws-color.png" alt="AWS">
-        <span>AWS</span>
-    </div>
-    <div class="skill">
-        <img src="https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png" alt="PostgreSQL">
+        <img src="./img/programming/postgresql.png" alt="PostgreSQL">
         <span>PostgreSQL</span>
     </div>
     <div class="skill">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.9WF0OC9phVbU1j3k2McOSAHaGN%26pid%3DApi&f=1&ipt=8ce8516420b9594d512304cf5cceef856f851ede0f6caf928753fdc4f7a708d4&ipo=images" alt="Docker">
+        <img src="./img/programming/mysql.png" alt="MySQL">
+        <span>MySQL</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/sql.jpeg" alt="JavaScript">
+        <span>SQL</span>
+    </div>
+</div>
+
+<h3>Web & Data Visualization Frameworks</h3>
+<div class="skills">
+    <div class="skill">
+        <img src="./img/programming/streamlit.png" alt="Streamlit">
+        <span>Streamlit</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/quarto.png" alt="Quarto">
+        <span>Quarto</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/rmarkdwon.png" alt="Rmarkdown">
+        <span>Rmarkdown</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/shiny.jpeg" alt="Shiny">
+        <span>Shiny</span>
+    </div>
+</div>
+
+
+<h3>Cloud and DevOps</h3>
+<div class="skills">
+    <div class="skill">
+        <img src="./img/programming/aws.png" alt="AWS">
+        <span>AWS</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/docker.png" alt="PostgreSQL">
         <span>Docker</span>
     </div>
     <div class="skill">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-        <span>CSS</span>
+        <img src="./img/programming/gh_actions.png" alt="Docker">
+        <span>CI/CD</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/git.png" alt="Git">
+        <span>Git</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/gh.png" alt="GitHub">
+        <span>GitHub</span>
     </div>
 </div>
+
+<h3>Web development technologies</h3>
+<div class="skills">
+    <div class="skill">
+        <img src="./img/programming/html5.png" alt="HTML5">
+        <span>HTML</span>
+    </div>
+    <div class="skill">
+        <img src="./img/programming/css.png" alt="CSS">
+        <span>CSS</span>
+    </div>
 </div>
 
 <footer>
