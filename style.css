@@ -141,3 +141,41 @@ footer a:hover {
     max-width: 1200px;
     margin: auto;
 }
+
+.accordion-button.category {
+    background-color: #f4f7fa;
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+.accordion-button.category:not(.collapsed) {
+    background-color: #e6f0fa;
+    color: #6610f2;
+}
+.accordion-item {
+    margin-bottom: 1.2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.accordion-body {
+    background: #f9f9f9;
+}
+.pub-border {
+    margin-bottom: 1.2rem;
+}
+
+.pub-border a {
+    color: #007acc;
+    text-decoration: underline;
+    font-size: 0.97em;
+}
+.pub-border a:hover {
+    color: #6610f2;
+    text-decoration: none;
+}
