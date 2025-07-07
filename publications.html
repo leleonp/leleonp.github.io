@@ -57,10 +57,10 @@
             <a class="nav-link" href="./education.html">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./experience.html">Experience</a>
+            <a class="nav-link" href="./experience.html">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./publications.html">Publications</a>
+            <a class="nav-link active" href="./publications.html">Publications</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./skills.html">Skills</a>
@@ -78,6 +78,16 @@
           <li class="nav-item">
             <a class="nav-link" href="mailto:your.email@example.com" target="_blank">
               <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://orcid.org/0000-0002-7640-1033" target="_blank" title="ORCID">
+              <i class="bi bi-person-badge" style="font-size: 1.2rem;"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.cl/citations?user=MKHM2loAAAAJ&hl" target="_blank" title="Google Scholar">
+              <i class="bi bi-mortarboard-fill" style="font-size: 1.2rem;"></i>
             </a>
           </li>
         </ul>
@@ -99,7 +109,18 @@
 
     <h1 class="mb-4">Publications</h1>
 
-    <div class="category">Journal Articles</div>
+<div class="accordion mb-4" id="pubAccordion">
+
+  <!-- Journal Articles -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingJournal">
+      <button class="accordion-button category collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJournal" aria-expanded="false" aria-controls="collapseJournal">
+        <i class="bi bi-journal-text me-2"></i> Journal Articles
+      </button>
+    </h2>
+    <div id="collapseJournal" class="accordion-collapse collapse" aria-labelledby="headingJournal" data-bs-parent="#pubAccordion">
+      <div class="accordion-body p-0">
+
     <div class="pub-border p-3">
         <div class="title_pub">Development of a bacteriophage cocktail with high specificity against high-risk avian pathogenic <i>Escherichia coli</i>.</div>
         <div class="authors">Rodrigo Norambuena, Victoria Rojas-Martínez, Eduardo Tobar-Calfucoy, Matías Aguilera, Andrea Sabag, María Sofía Zamudio, Pabla Lara, Daniel San Martín, Marcela Zabner, Daniel Tichy, Pamela Camejo, Felipe Rojas, <b>Luis León</b>, Michael Pino, Paola Mora, Soledad Ulloa, Pablo Cifuentes, Hans Pieringer, Nicolás Cifuentes Muñoz</div>
@@ -185,7 +206,20 @@
         <a href="https://pubmed.ncbi.nlm.nih.gov/17953976/">DOI: 10.1016/j.steroids.2007.09.003.</a>
     </div>
 
-    <div class="category">Book chapters</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Chapters -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingBook">
+      <button class="accordion-button category collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBook" aria-expanded="false" aria-controls="collapseBook">
+        <i class="bi bi-book me-2"></i> Book chapters
+      </button>
+    </h2>
+    <div id="collapseBook" class="accordion-collapse collapse" aria-labelledby="headingBook" data-bs-parent="#pubAccordion">
+      <div class="accordion-body p-0">
+
     <div class="pub-border p-3">
         <div class="title_pub">Visualization and Analysis of miRNA-mRNA networks</div>
         <div class="authors"><b>Luis E. León</b> and Sebastian Calligaris</div>
@@ -193,7 +227,20 @@
         <a href="https://pubmed.ncbi.nlm.nih.gov/27826930/">DOI: 10.1007/978-1-4939-6524-3_19</a>
     </div>
 
-    <div class="category">Preprints</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preprints -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingPreprints">
+      <button class="accordion-button category collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePreprints" aria-expanded="false" aria-controls="collapsePreprints">
+        <i class="bi-file-earmark-text"></i> Preprints
+      </button>
+    </h2>
+    <div id="collapsePreprints" class="accordion-collapse collapse" aria-labelledby="headingPreprints" data-bs-parent="#pubAccordion">
+      <div class="accordion-body p-0">
+
     <div class="pub-border p-3">
         <div class="title_pub">Decoding phage-host interactions: a machine learning approach to predict strain-specific infections</div>
         <div class="authors">P. Camejo, F. Rojas, A. Ossa, R. Hurtado, D. Tichy, C. Pieringer, M. Pino, P. Mora-Uribe, S.Ulloa, R.Norambuena, E. Tobar-Calfucoy, M. Aguilera, V. Rojas-Martínez, O. Cifuentes, A. Sabag, N. Cifuentes, P. Cifuentes, H. Pieringer, <b>LE León</b></div>
@@ -225,7 +272,20 @@
         <a href="https://www.biorxiv.org/content/10.1101/217216v1">DOI: 10.1101/217216</a>
     </div>
 
-    <div class="category">Patents</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patents -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingPatents">
+      <button class="accordion-button category collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePatents" aria-expanded="false" aria-controls="collapsePatents">
+        <i class="bi-award"></i> Patents
+      </button>
+    </h2>
+    <div id="collapsePatents" class="accordion-collapse collapse" aria-labelledby="headingPatents" data-bs-parent="#pubAccordion">
+      <div class="accordion-body p-0">
+
     <div class="pub-border p-3">
         <div class="title_pub">Systems and methods for predicting bacteriophage host range</div>
         <div class="authors">Camejo P., <b>León L</b>, et al.</div>
@@ -256,6 +316,9 @@
         <div class="journal">World Intellectual Property Organization, <span class="year">2018</span></div>
         <a href="https://patents.google.com/patent/US20180362967A1/en">US20180362967A1</a>
     </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer class="bg-dark text-white text-center py-3">
