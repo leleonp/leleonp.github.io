@@ -197,30 +197,3 @@ footer a:hover {
     color: #6610f2;
     text-decoration: none;
 }
-
-/* Styles moved from publications.html */
-.pub-border {
-    border-left: 6px solid #007acc;
-    border-radius: 0.5rem;
-    background: #f9f9f9;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    transition: border-color 0.3s;
-}
-.pub-border:hover {
-    border-left-color: #6610f2;
-}
-.category {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: 2.5rem;
-    padding-bottom: 5px;
-    color: #007acc;
-}
-.title_pub {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.authors, .journal, .year {
-    font-size: 0.95rem;
-}

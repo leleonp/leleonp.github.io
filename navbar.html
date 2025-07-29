@@ -51,22 +51,3 @@
       </div>
     </div>
 </nav>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
-      
-      const linkPath = href.replace('./', '');
-      if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  });
-</script>
