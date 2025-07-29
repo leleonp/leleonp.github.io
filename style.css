@@ -142,6 +142,25 @@ footer a:hover {
     margin: auto;
 }
 
+/* Extracted styles from HTML files */
+
+/* Profile picture styling */
+.rounded-circle {
+    border-radius: 50%;
+}
+
+/* Card border styles */
+.card.border-start {
+    border-left-width: 4px;
+}
+.card.border-primary {
+    border-color: #007bff;
+}
+.card.border-warning {
+    border-color: #ffc107;
+}
+
+/* Accordion styles */
 .accordion-button.category {
     background-color: #f4f7fa;
     color: #007acc;
@@ -169,7 +188,6 @@ footer a:hover {
 .pub-border {
     margin-bottom: 1.2rem;
 }
-
 .pub-border a {
     color: #007acc;
     text-decoration: underline;
@@ -178,4 +196,31 @@ footer a:hover {
 .pub-border a:hover {
     color: #6610f2;
     text-decoration: none;
+}
+
+/* Styles moved from publications.html */
+.pub-border {
+    border-left: 6px solid #007acc;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: border-color 0.3s;
+}
+.pub-border:hover {
+    border-left-color: #6610f2;
+}
+.category {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    padding-bottom: 5px;
+    color: #007acc;
+}
+.title_pub {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.authors, .journal, .year {
+    font-size: 0.95rem;
 }
