@@ -58,7 +58,8 @@
     const currentPath = window.location.pathname.split('/').pop();
 
     navLinks.forEach(link => {
-      if (link.getAttribute('href') === `./${currentPath}`) {
+      const linkPath = link.getAttribute('href').replace('./', '');
+      if (linkPath === currentPath) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
