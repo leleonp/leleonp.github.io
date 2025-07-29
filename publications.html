@@ -27,28 +27,23 @@
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
-      // 1. Inject the navbar HTML
-      const navbarPlaceholder = document.getElementById('navbar-placeholder');
-      navbarPlaceholder.innerHTML = data;
+      document.getElementById('navbar').innerHTML = data;
+      
+      // Set active nav link after navbar is loaded
+      const navLinks = document.querySelectorAll('.nav-link');
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
-      // 2. Get the current page's filename (e.g., "about.html" or "index.html")
-      // We use 'index.html' as a fallback for the root path "/"
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-      // 3. Select links ONLY from within the newly loaded navbar
-      const navLinks = navbarPlaceholder.querySelectorAll('nav a'); // More robust selector
-
-      // 4. Loop through the links and add the 'active' class
       navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href').split('/').pop();
-
-        if (linkPage === currentPage) {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
+        
+        const linkPath = href.replace('./', '');
+        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
           link.classList.add('active');
+        } else {
+          link.classList.remove('active');
         }
       });
-    })
-    .catch(error => {
-      console.error('Error fetching the navbar:', error);
     });
 </script>
 
