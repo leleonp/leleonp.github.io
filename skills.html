@@ -46,6 +46,36 @@
         color: var(--text-color);
         opacity: 0.8;
       }
+      .ai-featured-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-top: 4px solid var(--accent-color) !important;
+        border-radius: 16px;
+        padding: 26px;
+        height: 100%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .ai-featured-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+        border-color: var(--accent-color);
+      }
+      .credential-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--pill-bg);
+        color: var(--pill-text);
+        border: 1px solid var(--pill-border);
+        border-radius: 6px;
+        padding: 3px 8px;
+        font-size: 0.78rem;
+        font-weight: 500;
+      }
       .tier-card {
         background: var(--card-bg);
         border: 1px solid var(--card-border);
@@ -160,7 +190,7 @@
       </div>
       <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Skills & Technical Stack</h1>
       <p class="text-secondary mb-0">
-        Scientific workflows, genomic data engineering, cloud infrastructure, and organizational leadership.
+        Scientific workflows, genomic data engineering, AI agents & RAG architectures, cloud infrastructure, and organizational leadership.
       </p>
     </div>
 
@@ -168,26 +198,26 @@
     <div class="row g-3 mb-5">
       <div class="col-6 col-md-3">
         <div class="kpi-card">
-          <div class="kpi-number">Nextflow</div>
-          <div class="kpi-label">DSL2 & Containerized HPC</div>
+          <div class="kpi-number">Nextflow DSL2</div>
+          <div class="kpi-label">Pipelines & Cloud HPC</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="kpi-card">
-          <div class="kpi-number">Python / R</div>
-          <div class="kpi-label">Statistical & ML Modeling</div>
+          <div class="kpi-number">AI & Agents</div>
+          <div class="kpi-label">RAG, LangGraph & ML</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="kpi-card">
-          <div class="kpi-number">AWS / Docker</div>
-          <div class="kpi-label">Batch, S3 & Containers</div>
+          <div class="kpi-number">Cloud & DevOps</div>
+          <div class="kpi-label">AWS Batch, GCP & Docker</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="kpi-card">
-          <div class="kpi-number">SQL / Data</div>
-          <div class="kpi-label">PostgreSQL & Warehouses</div>
+          <div class="kpi-number">SQL & Vector DB</div>
+          <div class="kpi-label">PostgreSQL & pgvector</div>
         </div>
       </div>
     </div>
@@ -262,6 +292,70 @@
               <p class="small text-secondary mb-0">
                 Linux system administration, cloud compute management (GCP, AWS), POSIX shell automation, AWK/sed parsing, and multi-core resource allocation.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generative AI, Autonomous Agents & Scientific RAG (Tier 2) -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 fw-bold mb-0" style="color: var(--heading-color);">
+          <i class="bi bi-robot me-2" style="color: var(--accent-color);"></i>Generative AI, Autonomous Agents & Scientific RAG
+        </h2>
+        <span class="badge bg-secondary">Emerging Architectures</span>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Agentic Systems & Multi-Agent Workflows -->
+        <div class="col-lg-6">
+          <div class="ai-featured-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div style="width: 50px; height: 50px; border-radius: 12px; background: var(--accent-subtle); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                  <i class="bi bi-diagram-3-fill"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Autonomous Agents & Multi-Agent Systems</h3>
+                  <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">Agentic Orchestration</span>
+                </div>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Engineering autonomous, multi-step agent systems to streamline scientific computing and laboratory workflows. Implementing tool-calling LLMs, stateful multi-agent collaboration (LangGraph, CrewAI), and automated decision loops that generate Nextflow execution configs, validate QC metrics, and synthesize complex biological outputs.
+              </p>
+            </div>
+            <div class="pt-3 border-top d-flex flex-wrap gap-2">
+              <span class="credential-pill"><i class="bi bi-diagram-3 text-primary"></i> LangGraph & CrewAI</span>
+              <span class="credential-pill"><i class="bi bi-tools text-success"></i> Tool-Calling LLMs</span>
+              <span class="credential-pill"><i class="bi bi-arrow-repeat text-info"></i> Pipeline Orchestration</span>
+              <span class="credential-pill"><i class="bi bi-shield-check text-warning"></i> Guardrails & Validation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Domain Knowledge RAG & Semantic Search -->
+        <div class="col-lg-6">
+          <div class="ai-featured-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div style="width: 50px; height: 50px; border-radius: 12px; background: var(--accent-subtle); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                  <i class="bi bi-search-heart-fill"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Domain Knowledge RAG & Semantic Search</h3>
+                  <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">Vector Knowledge Bases</span>
+                </div>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Architecting Retrieval-Augmented Generation (RAG) frameworks for scientific literature and multi-omic data. Deploying dense embeddings, hybrid vector search (PostgreSQL + pgvector, ChromaDB, Qdrant), and contextual reranking to query PubMed/PMC corpuses, variant catalogs, and internal clinical assay documentation with zero hallucination.
+              </p>
+            </div>
+            <div class="pt-3 border-top d-flex flex-wrap gap-2">
+              <span class="credential-pill"><i class="bi bi-database text-primary"></i> PostgreSQL + pgvector</span>
+              <span class="credential-pill"><i class="bi bi-journal-medical text-danger"></i> PubMed & Literature QA</span>
+              <span class="credential-pill"><i class="bi bi-layers text-success"></i> Hybrid Dense/Sparse Search</span>
+              <span class="credential-pill"><i class="bi bi-dna text-info"></i> Bio-Embeddings</span>
             </div>
           </div>
         </div>
