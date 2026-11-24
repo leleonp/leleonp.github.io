@@ -1,0 +1,83 @@
+{
+  "site": {
+    "title": "Luis E. León Portfolio",
+    "description": "A portfolio showcasing the work and skills of Luis E. León",
+    "author": "Luis E. León",
+    "url": "https://leleonp.github.io",
+    "repository": "https://github.com/leleonp/portfolio_template"
+  },
+  "profile": {
+    "name": "Luis E. León",
+    "title": "Computational Biologist · Bioinformatician · Data Scientist",
+    "image": "img/profile_picture.jpeg",
+    "about": "I am a scientist known for creative and innovative thinking, with a strong attention to detail to efficiently solve problems and meet deadlines. I excel in collaborating with others to achieve shared goals, fostering positive relationships while valuing diverse perspectives and opinions. With strong organizational and planning skills, I effectively set specific objectives, manage resources, and deliver successful outcomes. My expertise lies in bioinformatics, with proficiency in Python, Bash, R, among other languages and database management using SQL. I am skilled in formulating hypotheses, designing and conducting experiments, and critically analyzing, synthesizing, and summarizing complex data. My problem-solving approach is methodical and focused, enabling me to draw objective, actionable conclusions."
+  },
+  "social": {
+    "github": {
+      "username": "leleonp",
+      "enabled": true,
+      "order": 1
+    },
+    "linkedin": {
+      "username": "leleonp",
+      "enabled": true,
+      "order": 2
+    },
+    "email": {
+      "address": "luisleon22@gmail.com",
+      "enabled": true,
+      "order": 3
+    },
+    "orcid": {
+      "id": "",
+      "enabled": false,
+      "order": 4
+    },
+    "scholar": {
+      "id": "",
+      "enabled": false,
+      "order": 5
+    },
+    "twitter": {
+      "username": "",
+      "enabled": false,
+      "order": 6
+    }
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "url": "./index.html"
+    },
+    {
+      "name": "Education",
+      "url": "./education.html"
+    },
+    {
+      "name": "Experience",
+      "url": "./experience.html"
+    },
+    {
+      "name": "Publications",
+      "url": "./publications.html"
+    },
+    {
+      "name": "Skills",
+      "url": "./skills.html"
+    },
+    {
+      "name": "Blog",
+      "url": "./blog.html"
+    }
+  ],
+  "features": {
+    "blog": true,
+    "search": true,
+    "themes": true,
+    "watermark": true
+  },
+  "home_variant": 1,
+  "home_variant_name": "Variante 1: Split-Hero Ejecutivo & Métricas",
+  "active_theme": "1_slate_teal",
+  "active_theme_name": "1. Slate & Teal Científico (Default)"
+}

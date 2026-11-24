@@ -1,0 +1,17 @@
+/* Theme: 9. Deep Forest & Copper */
+:root {
+    --bg-color: #f5f5f4;
+    --text-color: #1c1917;
+    --heading-color: #143628;
+    --navbar-bg: #143628;
+    --hero-bg-start: #143628;
+    --hero-bg-end: #1f4a39;
+    --accent-color: #c2410c;
+    --accent-light: #ea580c;
+    --accent-subtle: rgba(234, 88, 12, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #e7e5e4;
+    --pill-bg: #f5f5f4;
+    --pill-border: #d6d3d1;
+    --pill-text: #292524;
+}

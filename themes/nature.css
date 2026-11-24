@@ -1,0 +1,69 @@
+/* Nature theme for portfolio template */
+
+:root {
+    --primary-color: #2d5016;
+    --secondary-color: #4a7c59;
+    --accent-color: #6a994e;
+    --bg-color: #f7f9f2;
+    --surface-color: #ffffff;
+    --text-color: #1e2419;
+    --text-muted: #5a6447;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--secondary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--secondary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--secondary-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--primary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background-color: #e8f5e8 !important;
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    box-shadow: 0 4px 6px -1px rgba(74, 124, 89, 0.1) !important;
+    border: 1px solid rgba(106, 153, 78, 0.2) !important;
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+}
+
+/* Nature theme specific enhancements */
+.navbar-with-bg-image {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.header-with-bg-image {
+    border: 2px solid var(--accent-color);
+}

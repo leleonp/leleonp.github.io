@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found | [Your Name] Portfolio</title>
+    <meta name="description" content="Page not found - [Your Name] Portfolio">
+    <meta name="author" content="[Your Name]">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      .error-404-container {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .error-404-icon {
+        font-size: 5rem;
+        color: #3182bd;
+        margin-bottom: 1rem;
+      }
+      .error-404-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #3182bd;
+      }
+      .error-404-message {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        color: #555;
+      }
+      .error-404-btn {
+        font-size: 1.1rem;
+        padding: 0.75rem 2rem;
+      }
+    </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+      // Set active nav link after navbar is loaded
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+    });
+</script>
+
+<div class="container error-404-container">
+    <div class="error-404-icon">
+        <i class="bi bi-emoji-frown"></i>
+    </div>
+    <div class="error-404-title">404</div>
+    <div class="error-404-message">
+        Oops! The page you are looking for does not exist.<br>
+        It might have been moved or deleted.
+    </div>
+    <a href="index.html" class="btn btn-primary error-404-btn">
+        <i class="bi bi-house-door"></i> Go to Home
+    </a>
+</div>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; [Year] [Your Name] | <a href="https://github.com/[your-github-username]" class="text-white">GitHub</a></p>
+</footer>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

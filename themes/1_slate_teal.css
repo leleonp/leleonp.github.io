@@ -1,0 +1,17 @@
+/* Theme: 1. Slate & Teal Científico */
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #334155;
+    --heading-color: #0f172a;
+    --navbar-bg: #0f172a;
+    --hero-bg-start: #0f172a;
+    --hero-bg-end: #1e293b;
+    --accent-color: #0d9488;
+    --accent-light: #14b8a6;
+    --accent-subtle: rgba(20, 184, 166, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --pill-bg: #f1f5f9;
+    --pill-border: #cbd5e1;
+    --pill-text: #475569;
+}

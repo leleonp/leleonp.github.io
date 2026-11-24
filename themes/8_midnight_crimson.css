@@ -1,0 +1,17 @@
+/* Theme: 8. Midnight & Crimson Ruby */
+:root {
+    --bg-color: #fff1f2;
+    --text-color: #334155;
+    --heading-color: #0f172a;
+    --navbar-bg: #0f172a;
+    --hero-bg-start: #0f172a;
+    --hero-bg-end: #1e293b;
+    --accent-color: #e11d48;
+    --accent-light: #f43f5e;
+    --accent-subtle: rgba(244, 63, 94, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #ffe4e6;
+    --pill-bg: #fff1f2;
+    --pill-border: #fecdd3;
+    --pill-text: #9f1239;
+}

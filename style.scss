@@ -1,0 +1,214 @@
+/*
+  INSTRUCTIONS:
+  - This SCSS file provides styles for your portfolio template.
+  - You can customize colors, fonts, spacing, and layout as needed.
+  - Use variables for colors, fonts, and spacing for easier customization.
+  - Classes like .profile_is_rounded, .container, .section, .education-container, etc. are used in the HTML template.
+  - To add new sections, duplicate and modify container styles.
+  - For Bootstrap components, you can override styles here.
+  - Remove or edit any styles to fit your personal branding.
+*/
+
+// Variables for colors and fonts
+$main-bg: #3182bd;
+$body-bg: #f4f7fa;
+$font-main: 'Roboto', sans-serif;
+$font-header: 'Raleway', sans-serif;
+
+// Reset and base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-main;
+    background-color: $body-bg;
+    color: #333;
+    line-height: 1.6;
+}
+
+// Header styles
+header {
+    background-color: $main-bg;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    h1 {
+        font-family: $font-header;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    p {
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+}
+
+// Navigation styles
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Main container
+.container {
+    width: 90%;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+
+// Section styles
+.section {
+    margin: 30px 20px 30px 20px;
+    h2 {
+        font-family: $font-header;
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: $main-bg;
+    }
+    p {
+        font-size: 1.1em;
+        color: #666;
+    }
+}
+
+// Footer styles
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    a {
+        color: $main-bg;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .container {
+        width: 100%;
+    }
+    .skills {
+        justify-content: center;
+    }
+}
+
+// Education section container
+.education-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    height: 15vh;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+// Programming section container
+.programming-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+// Publication section container
+.publication-container {
+    display: flex;
+    justify-content: justify;
+    align-items: justify;
+    height: 20vh;
+    flex-direction: row;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+// Accordion styles for publications/skills
+.accordion-button.category {
+    background-color: #f4f7fa;
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: background 0.2s;
+    &:not(.collapsed) {
+        background-color: #e6f0fa;
+        color: #6610f2;
+    }
+}
+.accordion-item {
+    margin-bottom: 1.2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.accordion-body {
+    background: #f9f9f9;
+}
+
+// Publication border and link styles
+.pub-border {
+    margin-bottom: 1.2rem;
+    a {
+        color: #007acc;
+        text-decoration: underline;
+        font-size: 0.97em;
+        &:hover {
+            color: #6610f2;
+            text-decoration: none;
+        }
+    }
+}
+
+/*
+  TIP:
+  - To add new custom sections, copy a container style and adjust as needed.
+  - For Bootstrap components, use class selectors to override default styles.
+  - For color scheme, update all color values to match your branding.
+*/

@@ -1,0 +1,62 @@
+/* Machine Learning theme for portfolio template */
+
+:root {
+    --primary-color: #1f2937; /* Dark gray */
+    --secondary-color: #3b82f6; /* Bright blue */
+    --accent-color: #10b981; /* Green accent */
+    --bg-color: #111827; /* Very dark gray */
+    --surface-color: #1f2937; /* Dark gray surface */
+    --text-color: #f9fafb; /* Light text */
+    --text-muted: #9ca3af; /* Muted text */
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--secondary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--secondary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--accent-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--secondary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    background-color: var(--surface-color) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color) !important;
+}

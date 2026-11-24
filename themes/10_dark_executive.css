@@ -1,0 +1,17 @@
+/* Theme: 10. Dark Executive Pro */
+:root {
+    --bg-color: #0b0f19;
+    --text-color: #94a3b8;
+    --heading-color: #f8fafc;
+    --navbar-bg: #070a12;
+    --hero-bg-start: #0f172a;
+    --hero-bg-end: #1e293b;
+    --accent-color: #06b6d4;
+    --accent-light: #22d3ee;
+    --accent-subtle: rgba(6, 182, 212, 0.15);
+    --card-bg: #111827;
+    --card-border: #1f2937;
+    --pill-bg: #1f2937;
+    --pill-border: #374151;
+    --pill-text: #e2e8f0;
+}

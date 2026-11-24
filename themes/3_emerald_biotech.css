@@ -1,0 +1,17 @@
+/* Theme: 3. Emerald & Biotech Green */
+:root {
+    --bg-color: #f7faf8;
+    --text-color: #27272a;
+    --heading-color: #064e3b;
+    --navbar-bg: #064e3b;
+    --hero-bg-start: #064e3b;
+    --hero-bg-end: #065f46;
+    --accent-color: #059669;
+    --accent-light: #10b981;
+    --accent-subtle: rgba(16, 185, 129, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --pill-bg: #f0fdf4;
+    --pill-border: #bbf7d0;
+    --pill-text: #166534;
+}

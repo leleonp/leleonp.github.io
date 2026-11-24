@@ -1,0 +1,62 @@
+/* Software Development theme for portfolio template */
+
+:root {
+    --primary-color: #0d6efd; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary gray */
+    --accent-color: #6610f2; /* Purple accent */
+    --bg-color: #f8f9fa; /* Light gray background */
+    --surface-color: #ffffff; /* White surface */
+    --text-color: #212529; /* Dark text */
+    --text-muted: #6c757d; /* Muted text */
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--accent-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--primary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+    color: var(--primary-color) !important;
+}
+
+.card {
+    background-color: var(--surface-color) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+    color: var(--surface-color) !important;
+}

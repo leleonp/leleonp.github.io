@@ -1,0 +1,15 @@
+type,name,url,enabled,order,icon
+page,Home,./index.html,true,1,bi-house
+page,Education,./education.html,true,2,bi-mortarboard
+page,Experience,./experience.html,true,3,bi-briefcase
+page,Publications,./publications.html,true,4,bi-journal-text
+page,Skills,./skills.html,true,5,bi-tools
+page,Blog,./blog.html,true,6,bi-file-text
+page,Awards,./awards.html,true,7,bi-award
+page,Downloads,./files.html,true,8,bi-download
+social,GitHub,https://github.com/leleonp,true,1,bi-github
+social,LinkedIn,https://linkedin.com/in/leleonp,true,2,bi-linkedin
+social,Email,mailto:luisleon22@gmail.com,true,3,bi-envelope
+social,ORCID,https://orcid.org/,false,4,bi-person-badge
+social,Google Scholar,https://scholar.google.com/,false,5,bi-mortarboard
+social,X,https://x.com/,false,6,bi-twitter

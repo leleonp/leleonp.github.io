@@ -1,0 +1,17 @@
+/* Theme: 2. Nordic Navy & Deep Blue */
+:root {
+    --bg-color: #f1f5f9;
+    --text-color: #1e293b;
+    --heading-color: #0f172a;
+    --navbar-bg: #0f172a;
+    --hero-bg-start: #1e293b;
+    --hero-bg-end: #0f172a;
+    --accent-color: #2563eb;
+    --accent-light: #3b82f6;
+    --accent-subtle: rgba(37, 99, 235, 0.12);
+    --card-bg: #ffffff;
+    --card-border: #cbd5e1;
+    --pill-bg: #f8fafc;
+    --pill-border: #cbd5e1;
+    --pill-text: #334155;
+}

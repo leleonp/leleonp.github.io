@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis E. León, Ph.D. | Computational Biologist & Bioinformatician</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX0ZJB4HHR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MX0ZJB4HHR');
+    </script>
+    <style>
+      .hero-banner {
+        background: linear-gradient(135deg, var(--card-bg) 0%, var(--pill-bg) 100%);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 40px;
+        margin-top: 20px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      }
+      .hub-avatar {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 4px solid var(--accent-color);
+        object-fit: cover;
+      }
+      .nav-pills-custom .nav-link {
+        color: var(--text-color);
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      .nav-pills-custom .nav-link.active {
+        background-color: var(--accent-color) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 14px var(--accent-subtle);
+      }
+      .nav-pills-custom .nav-link:hover:not(.active) {
+        background-color: var(--pill-bg);
+        border-color: var(--card-border);
+      }
+      .tab-content-box {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      }
+    </style>
+</head>
+<body>
+
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && (href === './index.html' || href === 'index.html')) {
+          link.classList.add('active');
+        }
+      });
+    });
+</script>
+
+<div class="container mb-5">
+  
+  <!-- Panoramic Header Banner -->
+  <div class="hero-banner mb-4">
+    <div class="row align-items-center g-4">
+      <div class="col-md-auto text-center">
+        <img src="img/profile_picture.jpeg" alt="Luis E. León Ph.D." class="hub-avatar shadow-sm">
+      </div>
+      <div class="col-md">
+        <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+          <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">
+            Bioinformatics Lead & Researcher
+          </span>
+          <span class="badge bg-secondary">Ph.D. Biotechnology</span>
+        </div>
+        <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Luis E. León, Ph.D.</h1>
+        <p class="h6 mb-3" style="color: var(--accent-color); font-weight: 600;">
+          Computational Biologist · Bioinformatician · Data Scientist
+        </p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <a href="files/LLeon_2026.pdf" target="_blank" class="btn btn-primary btn-sm px-3 fw-semibold">
+            <i class="bi bi-file-earmark-pdf me-1"></i> Download CV
+          </a>
+          <div class="vr d-none d-sm-block"></div>
+          <span class="small text-secondary"><strong class="text-dark">16+</strong> Papers</span>
+          <span class="small text-secondary"><strong class="text-dark">5</strong> Patents</span>
+          <span class="small text-secondary"><strong class="text-dark">10+</strong> Yrs Exp</span>
+          <span class="small text-secondary"><i class="bi bi-geo-alt"></i> Santiago, Chile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Hub Navigation Tabs -->
+  <ul class="nav nav-pills nav-pills-custom justify-content-center gap-2 mb-4" id="hubTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="tab-bio-btn" data-bs-toggle="pill" data-bs-target="#tab-bio" type="button" role="tab">
+        <i class="bi bi-person-badge me-1"></i> 1. Visión & Perfil
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-stack-btn" data-bs-toggle="pill" data-bs-target="#tab-stack" type="button" role="tab">
+        <i class="bi bi-cpu me-1"></i> 2. Stack & Pipelines
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-career-btn" data-bs-toggle="pill" data-bs-target="#tab-career" type="button" role="tab">
+        <i class="bi bi-briefcase me-1"></i> 3. Liderazgo & Trayectoria
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-impact-btn" data-bs-toggle="pill" data-bs-target="#tab-impact" type="button" role="tab">
+        <i class="bi bi-trophy me-1"></i> 4. Patentes & Publicaciones
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="hubTabsContent">
+    
+    <!-- Tab 1: Vision & Bio -->
+    <div class="tab-pane fade show active" id="tab-bio" role="tabpanel">
+      <div class="tab-content-box">
+        <h3 class="h5 fw-bold mb-3" style="color: var(--heading-color);">Scientific Background & Problem Solving</h3>
+        <p style="text-align: justify; line-height: 1.8; color: var(--text-color);">
+          I am a scientist recognized for creative and innovative thinking, with strong attention to detail to efficiently solve high-dimensional problems and meet critical project deadlines. I excel in collaborating with cross-functional teams to achieve shared objectives, valuing diverse perspectives and fostering productive technical partnerships.
+        </p>
+        <p style="text-align: justify; line-height: 1.8; color: var(--text-color); margin-bottom: 0;">
+          My core expertise lies in computational biology and genomic data science, formulating empirical hypotheses, designing rigorous experiments, and critically synthesizing complex biological signals into clear, actionable outcomes for scientific and commercial stakeholders.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tab 2: Stack & Pipelines -->
+    <div class="tab-pane fade" id="tab-stack" role="tabpanel">
+      <div class="tab-content-box">
+        <h3 class="h5 fw-bold mb-3" style="color: var(--heading-color);">Computational & Engineering Competencies</h3>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <div class="p-3 border rounded-3" style="background: var(--pill-bg);">
+              <h6 class="fw-bold mb-2"><i class="bi bi-terminal me-2 text-primary"></i>Pipeline Orchestration</h6>
+              <p class="small text-secondary mb-0">Nextflow DSL2, AWS Batch, Slurm, Bash HPC scripts, Docker, and Singularity containerization.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 border rounded-3" style="background: var(--pill-bg);">
+              <h6 class="fw-bold mb-2"><i class="bi bi-code-square me-2 text-success"></i>Programming & Analysis</h6>
+              <p class="small text-secondary mb-0">Python (Pandas, SciPy, BioPython), R (Bioconductor, DESeq2, ggplot2), and SQL database architectures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-end">
+          <a href="skills.html" class="btn btn-sm btn-outline-primary">View Full Skills Matrix <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Career & Leadership -->
+    <div class="tab-pane fade" id="tab-career" role="tabpanel">
+      <div class="tab-content-box">
+        <h3 class="h5 fw-bold mb-3" style="color: var(--heading-color);">Current Role & Track Record</h3>
+        <div class="border-start border-3 border-primary ps-3 mb-3">
+          <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color);">Active Position</span>
+          <h5 class="h6 fw-bold mb-1 mt-1">Bioinformatics Lead · Codebreaker Technologies</h5>
+          <p class="small text-secondary mb-1">2022 – Present</p>
+          <p class="small text-secondary mb-0">Architecting high-throughput genomic data pipelines and automated analytical workflows for proprietary biotechnology initiatives.</p>
+        </div>
+        <div class="text-end">
+          <a href="experience.html" class="btn btn-sm btn-outline-primary">View Full Career Timeline <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Impact & Publications -->
+    <div class="tab-pane fade" id="tab-impact" role="tabpanel">
+      <div class="tab-content-box">
+        <h3 class="h5 fw-bold mb-3" style="color: var(--heading-color);">Research Outputs & Intellectual Property</h3>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <div class="p-3 border rounded-3 h-100" style="background: var(--pill-bg);">
+              <h6 class="fw-bold mb-1"><i class="bi bi-journal-richtext text-primary me-2"></i>16+ Scientific Articles</h6>
+              <p class="small text-secondary mb-0">Published in top-tier journals including Scientific Reports, Frontiers in Microbiology, and Genome Announcements.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 border rounded-3 h-100" style="background: var(--pill-bg);">
+              <h6 class="fw-bold mb-1"><i class="bi bi-shield-check text-success me-2"></i>5 Patents Granted / Applied</h6>
+              <p class="small text-secondary mb-0">Commercial-grade intellectual property in antimicrobial peptides and biological diagnostics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="awards.html" class="btn btn-sm btn-outline-secondary">Awards & Patents</a>
+          <a href="publications.html" class="btn btn-sm btn-outline-primary">Browse Publications <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0 small">&copy; 2026 Luis E. León, Ph.D. | <a href="https://github.com/leleonp" class="text-white text-decoration-underline">GitHub</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

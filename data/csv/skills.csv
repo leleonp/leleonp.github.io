@@ -1,0 +1,7 @@
+category,name,icon,description
+Programming Skills,Python,img/programming/python.png,High-level programming language
+Programming Skills,JavaScript,img/programming/javascript.png,Web development language
+Data Management,MySQL,img/programming/mysql.png,Relational database management
+Data Management,PostgreSQL,img/programming/postgresql.png,Advanced SQL database
+Soft Skills,Leadership,,"Ability to guide and motivate team members"
+Soft Skills,Communication,,"Excellent written and verbal communication skills"

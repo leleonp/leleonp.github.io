@@ -1,0 +1,63 @@
+/* Blue theme for portfolio template */
+
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --bg-color: #f0f9ff;
+    --surface-color: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+header {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--secondary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--secondary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--secondary-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--primary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background-color: #dbeafe !important;
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1) !important;
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+}

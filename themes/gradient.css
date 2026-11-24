@@ -1,0 +1,72 @@
+/* Gradient theme for portfolio template */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-color: #2d3748;
+    --text-muted: #718096;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    border: none !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--accent-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--primary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)) !important;
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* Gradient theme specific enhancements */
+.navbar-with-bg-image {
+    backdrop-filter: blur(20px);
+}
+
+.header-with-bg-image {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}

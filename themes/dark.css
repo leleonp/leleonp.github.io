@@ -1,0 +1,48 @@
+/* Dark theme for portfolio template */
+
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #ff6b6b;
+    --bg-color: #1a1a1a;
+    --surface-color: #2d2d2d;
+    --text-color: #ffffff;
+    --text-muted: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.card {
+    background-color: var(--surface-color) !important;
+    border: 1px solid #404040 !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: #000000 !important;
+}
+
+.accordion-button {
+    background-color: var(--surface-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid #404040 !important;
+}
+
+.accordion-body {
+    background-color: var(--surface-color) !important;
+}
+
+.pub-border {
+    background: var(--surface-color) !important;
+    border-left-color: var(--primary-color) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+footer {
+    background-color: #000000 !important;
+}

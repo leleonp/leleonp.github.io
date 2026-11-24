@@ -1,0 +1,17 @@
+/* Theme: 4. Modern Indigo & Graph */
+:root {
+    --bg-color: #fafafa;
+    --text-color: #27272a;
+    --heading-color: #18181b;
+    --navbar-bg: #18181b;
+    --hero-bg-start: #18181b;
+    --hero-bg-end: #27272a;
+    --accent-color: #4f46e5;
+    --accent-light: #6366f1;
+    --accent-subtle: rgba(99, 102, 241, 0.12);
+    --card-bg: #ffffff;
+    --card-border: #e4e4e7;
+    --pill-bg: #f4f4f5;
+    --pill-border: #e4e4e7;
+    --pill-text: #3f3f46;
+}

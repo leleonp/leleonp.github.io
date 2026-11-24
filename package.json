@@ -1,0 +1,43 @@
+{
+  "name": "portfolio-template",
+  "version": "1.0.0",
+  "description": "A customizable portfolio template for GitHub Pages",
+  "main": "index.html",
+  "scripts": {
+    "generate": "node scripts/generate_content.js",
+    "serve": "python3 -m http.server 4000",
+    "serve-node": "npx live-server --port=4000 --no-browser",
+    "layout": "python3 scripts/switch_layout.py",
+    "layout:1": "python3 scripts/switch_layout.py 1",
+    "layout:2": "python3 scripts/switch_layout.py 2",
+    "layout:3": "python3 scripts/switch_layout.py 3",
+    "layout:4": "python3 scripts/switch_layout.py 4",
+    "theme": "python3 scripts/switch_theme.py",
+    "theme:1": "python3 scripts/switch_theme.py 1",
+    "theme:2": "python3 scripts/switch_theme.py 2",
+    "theme:3": "python3 scripts/switch_theme.py 3",
+    "theme:4": "python3 scripts/switch_theme.py 4",
+    "theme:5": "python3 scripts/switch_theme.py 5",
+    "theme:6": "python3 scripts/switch_theme.py 6",
+    "theme:7": "python3 scripts/switch_theme.py 7",
+    "theme:8": "python3 scripts/switch_theme.py 8",
+    "theme:9": "python3 scripts/switch_theme.py 9",
+    "theme:10": "python3 scripts/switch_theme.py 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leleonp/portfolio_template.git"
+  },
+  "keywords": [
+    "portfolio",
+    "template",
+    "github-pages",
+    "website",
+    "personal"
+  ],
+  "author": "leleonp",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

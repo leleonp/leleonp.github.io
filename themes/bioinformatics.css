@@ -1,0 +1,62 @@
+/* Bioinformatics theme for portfolio template */
+
+:root {
+    --primary-color: #2d6a4f; /* Forest green */
+    --secondary-color: #40916c; /* Bright green */
+    --accent-color: #52b788; /* Light green accent */
+    --bg-color: #d8f3dc; /* Pale green background */
+    --surface-color: #ffffff; /* White surface */
+    --text-color: #081c15; /* Dark green text */
+    --text-muted: #52796f; /* Muted green text */
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--secondary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--secondary-color) !important;
+}
+
+.pub-border {
+    border-left-color: var(--accent-color) !important;
+}
+
+.accordion-button.category {
+    color: var(--primary-color) !important;
+}
+
+.accordion-button.category:not(.collapsed) {
+    background-color: rgba(64, 145, 108, 0.1) !important;
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    background-color: var(--surface-color) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+    color: var(--surface-color) !important;
+}

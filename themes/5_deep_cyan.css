@@ -1,0 +1,17 @@
+/* Theme: 5. Oceanic Deep Cyan */
+:root {
+    --bg-color: #f0f9ff;
+    --text-color: #1e293b;
+    --heading-color: #082f49;
+    --navbar-bg: #082f49;
+    --hero-bg-start: #082f49;
+    --hero-bg-end: #0c4a6e;
+    --accent-color: #0284c7;
+    --accent-light: #0ea5e9;
+    --accent-subtle: rgba(14, 165, 233, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #e0f2fe;
+    --pill-bg: #f0f9ff;
+    --pill-border: #bae6fd;
+    --pill-text: #0369a1;
+}

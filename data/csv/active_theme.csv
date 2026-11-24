@@ -1,0 +1,13 @@
+theme_name,theme_file,navbar_bg_image,page_bg_image,profile_bg_image
+light,,,,
+nature,themes/nature.css,img/backgrounds/navbar-nature.jpg,img/backgrounds/page-nature.jpg,img/backgrounds/profile-nature.jpg
+software-development,themes/software-development.css,,,
+machine-learning,themes/machine-learning.css,,,
+bioinformatics,themes/bioinformatics.css,,,
+dark,themes/dark.css,,,
+blue,themes/blue.css,,,
+green,themes/green.css,,,
+gradient,themes/gradient.css,img/backgrounds/navbar-gradient.jpg,img/backgrounds/page-gradient.jpg,img/backgrounds/profile-gradient.jpg
+
+
+
