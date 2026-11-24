@@ -50,7 +50,7 @@
         background: var(--card-bg);
         border: 1px solid var(--card-border);
         border-radius: 14px;
-        padding: 22px;
+        padding: 22px 24px;
         margin-bottom: 18px;
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         box-shadow: 0 4px 12px rgba(0,0,0,0.02);
@@ -61,8 +61,8 @@
         border-color: var(--accent-color);
       }
       .award-icon-box {
-        width: 52px;
-        height: 52px;
+        width: 54px;
+        height: 54px;
         border-radius: 12px;
         background: var(--accent-subtle);
         color: var(--accent-color);
@@ -77,10 +77,17 @@
         color: var(--pill-text);
         border: 1px solid var(--pill-border);
         border-radius: 50px;
-        padding: 4px 12px;
+        padding: 4px 14px;
         font-size: 0.85rem;
         font-weight: 600;
         white-space: nowrap;
+      }
+      .patents-crosslink-card {
+        background: linear-gradient(135deg, var(--card-bg) 0%, var(--pill-bg) 100%);
+        border: 1px solid var(--card-border);
+        border-left: 4px solid var(--accent-color) !important;
+        border-radius: 14px;
+        padding: 22px 26px;
       }
     </style>
 </head>
@@ -114,22 +121,16 @@
         <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">
           <i class="bi bi-trophy-fill me-1"></i> Recognitions
         </span>
-        <span class="text-secondary small">Honors, Grants & Inventions</span>
+        <span class="text-secondary small">Honors, Grants & Fellowships</span>
       </div>
-      <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Honors, Awards & Patents</h1>
+      <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Awards & Honors</h1>
       <p class="text-secondary mb-0">
-        Scientific distinctions, national doctoral fellowships, and granted international patents.
+        Scientific presentations recognized by national societies and competitive doctoral research fellowships.
       </p>
     </div>
 
     <!-- Awards KPI Counters -->
     <div class="row g-3 mb-5">
-      <div class="col-6 col-md-3">
-        <div class="kpi-card">
-          <div class="kpi-number">5</div>
-          <div class="kpi-label">International Patents</div>
-        </div>
-      </div>
       <div class="col-6 col-md-3">
         <div class="kpi-card">
           <div class="kpi-number">3</div>
@@ -138,8 +139,14 @@
       </div>
       <div class="col-6 col-md-3">
         <div class="kpi-card">
-          <div class="kpi-number">CONICYT</div>
-          <div class="kpi-label">Doctoral Fellowship</div>
+          <div class="kpi-number">2</div>
+          <div class="kpi-label">CONICYT Fellowships</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">3</div>
+          <div class="kpi-label">Scientific Societies</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
@@ -150,237 +157,157 @@
       </div>
     </div>
 
-    <!-- Patents Section -->
+    <!-- Section 1: Scientific Society Awards -->
     <section class="mb-5">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h2 class="h4 fw-bold mb-0" style="color: var(--heading-color);">
-            <i class="bi bi-shield-check me-2" style="color: var(--accent-color);"></i>International Patents & Inventions
+            <i class="bi bi-mic me-2" style="color: var(--accent-color);"></i>Scientific Society Distinctions
           </h2>
-          <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">5 Patents</span>
+          <span class="badge bg-secondary">Oral Presentations</span>
         </div>
 
+        <!-- 2015 Genetics -->
         <div class="award-card">
             <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
                 <div class="award-icon-box">
-                    <i class="bi bi-shield-lock"></i>
+                    <i class="bi bi-trophy"></i>
                 </div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
                         <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Systems and methods for predicting bacteriophage host range</h3>
-                            <h4 class="h6 mb-0 text-secondary">World Intellectual Property Organization (WIPO)</h4>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                                <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">1st Place</span>
+                            </div>
+                            <h4 class="h6 mb-0 text-secondary">Sociedad de Genética de Chile (SOCHIGEN)</h4>
                         </div>
-                        <span class="year-pill">2024 · PCT/IB2023/054805</span>
+                        <span class="year-pill"><i class="bi bi-calendar3"></i> 2015</span>
                     </div>
-                    <p class="text-secondary small mb-2 mt-1">
-                        Camejo P., <b>León L.</b>, et al. Machine learning models and genomic feature matrices predicting strain-specific phage infections.
+                    <p class="text-secondary small mb-0 mt-2" style="line-height: 1.6;">
+                        Awarded for the highest scientific and communicative merit at the XLVIII Annual Meeting of the Chilean Society of Genetics.
                     </p>
-                    <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2024231715" target="_blank" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View WIPO Filing
-                    </a>
                 </div>
             </div>
         </div>
 
+        <!-- 2011 Biochemistry -->
         <div class="award-card">
             <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
                 <div class="award-icon-box">
-                    <i class="bi bi-shield-lock"></i>
+                    <i class="bi bi-trophy"></i>
                 </div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
                         <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Method and system for characterization of female reproductive system-related conditions</h3>
-                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                                <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">1st Place</span>
+                            </div>
+                            <h4 class="h6 mb-0 text-secondary">Sociedad de Bioquímica y Biología Molecular de Chile</h4>
                         </div>
-                        <span class="year-pill">2021 · US11001900B2 (Granted)</span>
+                        <span class="year-pill"><i class="bi bi-calendar3"></i> 2011</span>
                     </div>
-                    <p class="text-secondary small mb-2 mt-1">
-                        Z Apte, E Bik, SW Bird, <b>LE León</b>, PA Nieto, V Alegria-Mera, C Bravo, et al. High-throughput sequencing diagnostic platform.
+                    <p class="text-secondary small mb-0 mt-2" style="line-height: 1.6;">
+                        Selected as the best oral communication at the XXXIV Annual Meeting of the Chilean Society of Biochemistry and Molecular Biology.
                     </p>
-                    <a href="https://patents.google.com/patent/US11001900B2/en" target="_blank" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
-                    </a>
                 </div>
             </div>
         </div>
 
+        <!-- 2006 Reproduction -->
         <div class="award-card">
             <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
                 <div class="award-icon-box">
-                    <i class="bi bi-shield-lock"></i>
+                    <i class="bi bi-trophy"></i>
                 </div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
                         <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Normalization for sequencing libraries</h3>
-                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                                <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">1st Place</span>
+                            </div>
+                            <h4 class="h6 mb-0 text-secondary">Sociedad Chilena de Reproducción y Desarrollo</h4>
                         </div>
-                        <span class="year-pill">2019 · US20190078085A1</span>
+                        <span class="year-pill"><i class="bi bi-calendar3"></i> 2006</span>
                     </div>
-                    <p class="text-secondary small mb-2 mt-1">
-                        Z Apte, J Richman, D Almonacid, E Morales, R Ortiz, N Ordenes, J Jiménez, C Bravo, N Scioscia, E Olivares, <b>Luis León</b>, et al.
+                    <p class="text-secondary small mb-0 mt-2" style="line-height: 1.6;">
+                        Recognized for outstanding presentation at the XVII Annual Meeting of the Chilean Society of Reproduction and Development.
                     </p>
-                    <a href="https://patents.google.com/patent/US20190078085A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="award-card">
-            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
-                <div class="award-icon-box">
-                    <i class="bi bi-shield-lock"></i>
-                </div>
-                <div class="flex-grow-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Single molecule sequencing and unique molecular identifiers</h3>
-                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
-                        </div>
-                        <span class="year-pill">2019 · US20190136310A1</span>
-                    </div>
-                    <p class="text-secondary small mb-2 mt-1">
-                        Z Apte, J Richman, D Almonacid, E Morales, <b>L León</b>, SW Bird, J Ugalde. Advanced molecular barcoding for accurate sequencing counts.
-                    </p>
-                    <a href="https://patents.google.com/patent/US20190136310A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="award-card">
-            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
-                <div class="award-icon-box">
-                    <i class="bi bi-shield-lock"></i>
-                </div>
-                <div class="flex-grow-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Method and system for library preparation with unique molecular identifiers</h3>
-                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
-                        </div>
-                        <span class="year-pill">2018 · US20180362967A1</span>
-                    </div>
-                    <p class="text-secondary small mb-2 mt-1">
-                        Z Apte, J Richman, D Almonacid, J Jimenez, R Ortiz, E Morales, Nicolas Ordenes, <b>Luis León</b>. Library preparation methods.
-                    </p>
-                    <a href="https://patents.google.com/patent/US20180362967A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Awards & Fellowships Section -->
-    <section>
-        <h2 class="h4 fw-bold mb-3" style="color: var(--heading-color);">
-            <i class="bi bi-patch-check me-2" style="color: var(--accent-color);"></i>Academic Honors & Fellowships
-        </h2>
-
-        <div class="award-card">
-            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
-                <div class="award-icon-box">
-                    <i class="bi bi-mic"></i>
-                </div>
-                <div class="flex-grow-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
-                        <div>
-                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Genetics (SOCHIGEN)</h4>
-                        </div>
-                        <span class="year-pill">2015</span>
-                    </div>
-                    <p class="text-secondary small mb-0 mt-1">
-                        Awarded for highest scientific merit at the XLVIII Annual Meeting of the Chilean Society of Genetics.
-                    </p>
-                </div>
-            </div>
+    <!-- Section 2: Competitive National Fellowships -->
+    <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="h4 fw-bold mb-0" style="color: var(--heading-color);">
+            <i class="bi bi-award me-2" style="color: var(--accent-color);"></i>National Research Fellowships & Grants
+          </h2>
+          <span class="badge bg-secondary">CONICYT / ANID</span>
         </div>
 
+        <!-- 2012 Thesis Completion -->
         <div class="award-card">
             <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
                 <div class="award-icon-box">
-                    <i class="bi bi-award"></i>
+                    <i class="bi bi-patch-check"></i>
                 </div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
                         <div>
                             <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Ph.D. Thesis Completion Scholarship</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">CONICYT-Chile (ANID)</h4>
+                            <h4 class="h6 mb-0 text-secondary">CONICYT-Chile (National Research Agency)</h4>
                         </div>
-                        <span class="year-pill">2012</span>
+                        <span class="year-pill"><i class="bi bi-calendar3"></i> 2012</span>
                     </div>
-                    <p class="text-secondary small mb-0 mt-1">
-                        National competitive grant for final-stage doctoral thesis execution and publication.
+                    <p class="text-secondary small mb-0 mt-2" style="line-height: 1.6;">
+                        Highly selective competitive fellowship awarded to finish doctoral research in Molecular Genetics & Microbiology at PUC Chile.
                     </p>
                 </div>
             </div>
         </div>
 
+        <!-- 2008-2011 PhD Scholarship -->
         <div class="award-card">
             <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
                 <div class="award-icon-box">
-                    <i class="bi bi-mic"></i>
-                </div>
-                <div class="flex-grow-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
-                        <div>
-                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Biochemistry and Molecular Biology</h4>
-                        </div>
-                        <span class="year-pill">2011</span>
-                    </div>
-                    <p class="text-secondary small mb-0 mt-1">
-                        Recognized at the XXXIV Annual Meeting of the Chilean Society of Biochemistry and Molecular Biology.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="award-card">
-            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
-                <div class="award-icon-box">
-                    <i class="bi bi-award"></i>
+                    <i class="bi bi-patch-check"></i>
                 </div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
                         <div>
                             <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">National Ph.D. Scholarship</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">CONICYT-Chile (ANID)</h4>
+                            <h4 class="h6 mb-0 text-secondary">CONICYT-Chile (National Research Agency)</h4>
                         </div>
-                        <span class="year-pill">2008 – 2011</span>
+                        <span class="year-pill"><i class="bi bi-calendar3"></i> 2008 – 2011</span>
                     </div>
-                    <p class="text-secondary small mb-0 mt-1">
-                        Full fellowship supporting doctoral studies in Molecular Genetics and Microbiology at PUC Chile.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="award-card">
-            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
-                <div class="award-icon-box">
-                    <i class="bi bi-mic"></i>
-                </div>
-                <div class="flex-grow-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
-                        <div>
-                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Reproduction and Development</h4>
-                        </div>
-                        <span class="year-pill">2006</span>
-                    </div>
-                    <p class="text-secondary small mb-0 mt-1">
-                        Awarded at the XVII Annual Meeting of the Chilean Society of Reproduction and Development.
+                    <p class="text-secondary small mb-0 mt-2" style="line-height: 1.6;">
+                        Full 4-year national doctoral scholarship supporting graduate training, tuition, and experimental research at Pontificia Universidad Católica de Chile.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Crosslink to Patents in Publications -->
+    <div class="patents-crosslink-card">
+        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-shield-check fs-2" style="color: var(--accent-color);"></i>
+                <div>
+                    <h3 class="h6 fw-bold mb-1" style="color: var(--heading-color);">Looking for Intellectual Property & Patents?</h3>
+                    <p class="small text-secondary mb-0">
+                        The 5 international patents (WIPO/USPTO) are cataloged under the scientific output section.
+                    </p>
+                </div>
+            </div>
+            <a href="publications.html#headingPatents" class="btn btn-outline-primary btn-sm px-3 fw-semibold text-nowrap">
+                View 5 Patents in Publications <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 </div>
 
 <footer class="bg-dark text-white text-center py-4 mt-5">
