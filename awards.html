@@ -20,7 +20,31 @@
       .page-header-banner {
         padding: 30px 0 25px 0;
         border-bottom: 1px solid var(--card-border);
-        margin-bottom: 35px;
+        margin-bottom: 30px;
+      }
+      .kpi-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 18px 15px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      }
+      .kpi-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .kpi-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: var(--text-color);
+        opacity: 0.8;
       }
       .award-card {
         background: var(--card-bg);
@@ -96,6 +120,34 @@
       <p class="text-secondary mb-0">
         Scientific distinctions, national doctoral fellowships, and granted international patents.
       </p>
+    </div>
+
+    <!-- Awards KPI Counters -->
+    <div class="row g-3 mb-5">
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">5</div>
+          <div class="kpi-label">International Patents</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">3</div>
+          <div class="kpi-label">Best Oral Presentations</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">CONICYT</div>
+          <div class="kpi-label">Doctoral Fellowship</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">100%</div>
+          <div class="kpi-label">Peer-Vetted Honors</div>
+        </div>
+      </div>
     </div>
 
     <!-- Patents Section -->

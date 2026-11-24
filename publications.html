@@ -20,7 +20,31 @@
       .page-header-banner {
         padding: 30px 0 25px 0;
         border-bottom: 1px solid var(--card-border);
-        margin-bottom: 35px;
+        margin-bottom: 30px;
+      }
+      .kpi-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 18px 15px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      }
+      .kpi-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .kpi-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: var(--text-color);
+        opacity: 0.8;
       }
       .accordion-item {
         background: var(--card-bg);
@@ -145,6 +169,34 @@
           <a href="https://orcid.org/0000-0002-7640-1033" target="_blank" class="btn btn-sm btn-outline-secondary">
             <i class="bi bi-person-badge me-1"></i> ORCID
           </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publications KPI Counters -->
+    <div class="row g-3 mb-5">
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">14+</div>
+          <div class="kpi-label">Peer-Reviewed Articles</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">5</div>
+          <div class="kpi-label">International Patents</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">1</div>
+          <div class="kpi-label">Book Chapter (Springer)</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">5</div>
+          <div class="kpi-label">Preprints (bioRxiv/medRxiv)</div>
         </div>
       </div>
     </div>

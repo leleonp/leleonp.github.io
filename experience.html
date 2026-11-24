@@ -20,53 +20,131 @@
       .page-header-banner {
         padding: 30px 0 25px 0;
         border-bottom: 1px solid var(--card-border);
+        margin-bottom: 30px;
+      }
+      .kpi-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 18px 15px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      }
+      .kpi-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .kpi-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: var(--text-color);
+        opacity: 0.8;
+      }
+      /* Modern Timeline Styling */
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 15px;
+        bottom: 20px;
+        width: 3px;
+        background: var(--card-border);
+        border-radius: 3px;
+      }
+      .timeline-item {
+        position: relative;
         margin-bottom: 35px;
       }
-      .exp-card {
+      .timeline-dot {
+        position: absolute;
+        left: -30px;
+        top: 22px;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 4px solid var(--accent-color);
+        box-shadow: 0 0 0 4px var(--accent-subtle);
+      }
+      .timeline-dot.active-dot {
+        background: var(--accent-color);
+        box-shadow: 0 0 0 6px var(--accent-subtle);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(13, 148, 136, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+      }
+      .timeline-card {
         background: var(--card-bg);
         border: 1px solid var(--card-border);
         border-radius: 14px;
         padding: 24px;
-        margin-bottom: 22px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
       }
-      .exp-card:hover {
+      .timeline-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.06);
         border-color: var(--accent-color);
       }
-      .exp-card.active-role {
+      .timeline-card.current-card {
         border-left: 5px solid var(--accent-color) !important;
       }
-      .exp-logo-box {
-        width: 85px;
-        height: 85px;
+      .company-logo-box {
+        width: 65px;
+        height: 65px;
         border-radius: 12px;
         background: #ffffff;
         border: 1px solid var(--card-border);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        padding: 6px;
+        flex-shrink: 0;
       }
-      .exp-logo-box img {
+      .company-logo-box img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
       }
-      .date-badge {
+      .tech-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: var(--pill-bg);
+        color: var(--pill-text);
+        border: 1px solid var(--pill-border);
+        border-radius: 6px;
+        padding: 3px 9px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+      .date-pill {
         background: var(--pill-bg);
         color: var(--accent-color);
         font-weight: 600;
         font-size: 0.85rem;
-        padding: 6px 12px;
-        border-radius: 20px;
+        padding: 4px 12px;
+        border-radius: 50px;
         border: 1px solid var(--pill-border);
         display: inline-flex;
         align-items: center;
         gap: 5px;
+        white-space: nowrap;
       }
     </style>
 </head>
@@ -104,199 +182,251 @@
       </div>
       <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Professional Experience</h1>
       <p class="text-secondary mb-0">
-        Over a decade directing bioinformatics engineering teams, cloud infrastructures, and translational genomic science.
+        Over a decade directing bioinformatics teams, scalable multi-omics architectures, and data-driven biotechnology.
       </p>
     </div>
 
-    <!-- Experience Timeline Cards -->
-    <section>
-        <!-- Codebreaker Biosciences -->
-        <div class="exp-card active-role">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/codebreaker.png" alt="Codebreaker Biosciences Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <div class="d-flex align-items-center gap-2 mb-1">
-                                <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Codebreaker Biosciences</h3>
-                                <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">Active Position</span>
-                            </div>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Bioinformatics Lead</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> March 2025 – Present</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Leading the development of novel algorithms and analytical methodologies for high-throughput microbiome data. Architecting end-to-end bioinformatics pipelines, relational and specialized databases, interactive reporting systems, and scalable AWS cloud computing infrastructures.
-                    </p>
-                </div>
-            </div>
+    <!-- Career Metrics Overview -->
+    <div class="row g-3 mb-5">
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">12+</div>
+          <div class="kpi-label">Years Leading Teams</div>
         </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">4</div>
+          <div class="kpi-label">Executive Roles (Dir / Head)</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">Global</div>
+          <div class="kpi-label">US & Latin America Impact</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="kpi-card">
+          <div class="kpi-number">AWS / Slurm</div>
+          <div class="kpi-label">HPC & Cloud Deployment</div>
+        </div>
+      </div>
+    </div>
 
-        <!-- PhageLab Director -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/phagelab_logo.png" alt="PhageLab Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">PhageLab</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Computational Biology and Data Science</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> December 2023 – November 2024</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Directed an interdisciplinary team of computational biologists and data scientists engineering machine learning algorithms for microbial genomic data. Responsible for strategic pipeline design, multi-source data integration to predict bacteriophage-bacteria interactions, and managing enterprise software tools and databases supporting large-scale genomics.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <!-- Modern Career Timeline -->
+    <div class="timeline">
 
-        <!-- PhageLab Head -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/phagelab_logo.png" alt="PhageLab Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">PhageLab</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Head of Bioinformatics</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> December 2021 – November 2023</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Managed a multidisciplinary team of bioinformaticians, biochemists, and biotechnologists. Coordinated joint workflows with molecular biology wet-labs and supervised high-throughput genomic data pipelines with robust statistical controls, contributing to scientific publications and international patent filings.
-                    </p>
-                </div>
+      <!-- 1. Codebreaker Biosciences -->
+      <div class="timeline-item">
+        <div class="timeline-dot active-dot"></div>
+        <div class="timeline-card current-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/codebreaker.png" alt="Codebreaker Biosciences">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Codebreaker Biosciences</h3>
+                    <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">Active Leadership</span>
+                  </div>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Bioinformatics Lead</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> March 2025 – Present</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Spearheading the engineering of proprietary algorithms and data structures to analyze high-throughput microbiome data. Architecting end-to-end bioinformatics pipelines, scientific databases, automated reporting engines, and containerized AWS Batch cloud architectures.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-gear-wide-connected text-primary"></i> Nextflow DSL2</span>
+                <span class="tech-chip"><i class="bi bi-cloud text-info"></i> AWS Batch / S3</span>
+                <span class="tech-chip"><i class="bi bi-code-slash text-success"></i> Python</span>
+                <span class="tech-chip"><i class="bi bi-database text-danger"></i> Relational DBs</span>
+                <span class="tech-chip"><i class="bi bi-box-seam text-warning"></i> Docker</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Psomagen USA -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/psomagen_logo.png" alt="Psomagen USA Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Psomagen USA</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Senior Bioinformatics Scientist</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> December 2020 – November 2021</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Instrumental in developing advanced bioinformatics pipelines for clinical and environmental microbiome analysis. Authored comprehensive data analytics reports and interactive visualizations for global clients, ensuring complex genomic data was actionable and rigorously verified.
-                    </p>
-                </div>
+      <!-- 2. PhageLab Director -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/phagelab_logo.png" alt="PhageLab">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">PhageLab</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Computational Biology & Data Science</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> Dec 2023 – Nov 2024</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Directed a multidisciplinary team of computational biologists and data scientists developing machine learning algorithms for bacterial-phage interactions. Led data governance, infrastructure scaling, and pipeline execution for large-scale genomic datasets.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-robot text-primary"></i> Machine Learning</span>
+                <span class="tech-chip"><i class="bi bi-diagram-3 text-success"></i> Team Leadership</span>
+                <span class="tech-chip"><i class="bi bi-virus text-danger"></i> Phage Genomics</span>
+                <span class="tech-chip"><i class="bi bi-cpu text-info"></i> Pipeline Orchestration</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Genoma Mayor -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/genoma_mayor_logo.png" alt="Genoma Mayor Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Centro de Genómica y Bioinformática (Genoma Mayor)</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Bioinformatics</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> November 2019 – November 2021</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Constructed and automated multiple genomic analysis pipelines, optimized existing workflows for high data throughput and integrity, and led the development of dynamic scientific reporting dashboards using R tools (Shiny/Markdown).
-                    </p>
-                </div>
+      <!-- 3. PhageLab Head -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/phagelab_logo.png" alt="PhageLab">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">PhageLab</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Head of Bioinformatics</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> Dec 2021 – Nov 2023</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Managed bioinformaticians, biochemists, and software engineers. Coordinated wet-lab genomic experiments, established rigorous statistical controls, and co-authored scientific publications and international patent applications.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-shield-check text-warning"></i> Patent Co-Inventor</span>
+                <span class="tech-chip"><i class="bi bi-journal-text text-primary"></i> Publications</span>
+                <span class="tech-chip"><i class="bi bi-check2-circle text-success"></i> Statistical Controls</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- uBiome Director -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/ubiome_logo.png" alt="uBiome Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">uBiome</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Bioinformatics</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> March 2019 – October 2019</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Directed bioinformaticians and data scientists in developing production microbiome pipelines. Key architect in designing algorithms for clinical sequencing assays, collaborating across product and engineering to ensure data governance, computational scalability, and regulatory compliance.
-                    </p>
-                </div>
+      <!-- 4. Psomagen USA -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/psomagen_logo.png" alt="Psomagen USA">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Psomagen USA</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Senior Bioinformatics Scientist</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> Dec 2020 – Nov 2021</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Developed automated analysis pipelines for US clinical and consumer microbiome sequencing. Designed interactive data visualization tools and automated clinical reports for healthcare providers and scientific clients.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-graph-up text-primary"></i> Data Visualization</span>
+                <span class="tech-chip"><i class="bi bi-file-earmark-medical text-success"></i> Clinical Reports</span>
+                <span class="tech-chip"><i class="bi bi-dna text-info"></i> Metagenomics NGS</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- uBiome Team Lead -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/ubiome_logo.png" alt="uBiome Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">uBiome</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Algorithm Development Team Lead</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> December 2017 – February 2019</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Supervised algorithm design and execution for microbiome profiling. Partnered directly with wet-lab experimentalists to validate computational predictions and optimize assay accuracy.
-                    </p>
-                </div>
+      <!-- 5. Genoma Mayor -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/genoma_mayor_logo.png" alt="Genoma Mayor">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Centro de Genómica y Bioinformática (Genoma Mayor)</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Bioinformatics</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> Nov 2019 – Nov 2021</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Architected genomic pipelines and managed cluster computation workflows. Optimized data integrity protocols and pioneered interactive scientific web tools in R (Shiny/RMarkdown) for multi-omic cohort studies.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-window text-primary"></i> R / Shiny</span>
+                <span class="tech-chip"><i class="bi bi-speedometer2 text-success"></i> Workflow Optimization</span>
+                <span class="tech-chip"><i class="bi bi-hdd-network text-info"></i> HPC Management</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Universidad del Desarrollo -->
-        <div class="exp-card">
-            <div class="row align-items-start g-3">
-                <div class="col-md-auto text-center">
-                    <div class="exp-logo-box mx-auto">
-                        <img src="img/udd_logo.png" alt="Universidad del Desarrollo Logo">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-                        <div>
-                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Universidad del Desarrollo</h3>
-                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Bioinformatics Researcher</h4>
-                        </div>
-                        <span class="date-badge"><i class="bi bi-calendar3"></i> November 2012 – April 2017</span>
-                    </div>
-                    <p class="text-secondary small mb-0" style="text-align: justify; line-height: 1.6;">
-                        Engineered computational pipelines for human genomic and clinical genetic studies in close partnership with medical physicians and clinical geneticists, developing software tools and databases for large-scale cohort studies.
-                    </p>
-                </div>
+      <!-- 6. uBiome Director -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/ubiome_logo.png" alt="uBiome">
             </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">uBiome</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Director of Bioinformatics & Algorithm Lead</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> May 2017 – Oct 2019</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Led the Algorithm Development team in designing clinical sequencing assays and patent-protected algorithms for women’s health and gut microbiome diagnostics. Advanced through consecutive leadership promotions (Senior Scientist → Team Lead → Director).
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-shield-check text-warning"></i> Multi-Patent Inventor</span>
+                <span class="tech-chip"><i class="bi bi-diagram-2 text-primary"></i> Algorithm R&D</span>
+                <span class="tech-chip"><i class="bi bi-people text-success"></i> Cross-Functional Lead</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- 7. Universidad del Desarrollo -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+            <div class="company-logo-box">
+              <img src="img/udd_logo.png" alt="Universidad del Desarrollo">
+            </div>
+            <div class="flex-grow-1">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Universidad del Desarrollo</h3>
+                  <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Bioinformatics Researcher & Cluster Lead</h4>
+                </div>
+                <span class="date-pill"><i class="bi bi-calendar3"></i> Nov 2012 – Apr 2017</span>
+              </div>
+              <p class="text-secondary small mb-3" style="text-align: justify; line-height: 1.6;">
+                Collaborated directly with physicians and clinical geneticists on human rare disease cohorts (22q11.2 microdeletion). Managed university high-performance computing cluster operations, job queuing, and storage systems.
+              </p>
+              <div class="d-flex flex-wrap">
+                <span class="tech-chip"><i class="bi bi-server text-primary"></i> HPC Cluster Administration</span>
+                <span class="tech-chip"><i class="bi bi-hospital text-danger"></i> Clinical Genetics</span>
+                <span class="tech-chip"><i class="bi bi-database-check text-info"></i> Genomic Databases</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 </div>
 
 <footer class="bg-dark text-white text-center py-4 mt-5">
