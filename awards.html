@@ -1,63 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Luis E. León Ph.D. | Awards</title>
-  <meta name="description" content="Awards, honors and recognitions of Luis E. León">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luis E. León, Ph.D. | Awards & Honors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX0ZJB4HHR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MX0ZJB4HHR');
+    </script>
+    <style>
+      .page-header-banner {
+        padding: 30px 0 25px 0;
+        border-bottom: 1px solid var(--card-border);
+        margin-bottom: 35px;
+      }
+      .award-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 18px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      }
+      .award-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+        border-color: var(--accent-color);
+      }
+      .award-icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: var(--accent-subtle);
+        color: var(--accent-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+      .year-pill {
+        background: var(--pill-bg);
+        color: var(--pill-text);
+        border: 1px solid var(--pill-border);
+        border-radius: 50px;
+        padding: 4px 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    </style>
 </head>
 <body>
-  <div id="navbar"></div>
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-        const navLinks = document.querySelectorAll('.nav-link');
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
-          const linkPath = href.replace('./', '');
-          if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
+    
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+      const navLinks = document.querySelectorAll('.nav-link');
+      const currentPath = window.location.pathname.split('/').pop() || 'awards.html';
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
+        const linkPath = href.replace('./', '');
+        if (linkPath === currentPath || linkPath === 'awards.html') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       });
-  </script>
+    });
+</script>
 
-  <div class="container mb-5">
-    <!-- Profile Header -->
-    <header class="text-center mb-5">
-      <div class="d-flex flex-column align-items-center">
-        <figure class="mb-3">
-          <img src="img/profile_picture.jpeg" alt="Profile picture" class="rounded-circle" width="100" height="100">
-        </figure>
-        <h1>Luis E. León Ph.D.</h1>
-        <h2>Computational Biologist · Bioinformatician · Data Scientist</h2>
+<div class="container mb-5">
+    <!-- Modern Page Header Banner -->
+    <div class="page-header-banner">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">
+          <i class="bi bi-trophy-fill me-1"></i> Recognitions
+        </span>
+        <span class="text-secondary small">Honors, Grants & Inventions</span>
       </div>
-    </header>
+      <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Honors, Awards & Patents</h1>
+      <p class="text-secondary mb-0">
+        Scientific distinctions, national doctoral fellowships, and granted international patents.
+      </p>
+    </div>
 
-    <h1 class="mb-4"><i class="bi bi-award me-2"></i>Honors & Awards</h1>
+    <!-- Patents Section -->
+    <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="h4 fw-bold mb-0" style="color: var(--heading-color);">
+            <i class="bi bi-shield-check me-2" style="color: var(--accent-color);"></i>International Patents & Inventions
+          </h2>
+          <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">5 Patents</span>
+        </div>
 
-    <section id="awards-container" class="row g-3">
-      <!-- Awards will be injected here from data/csv/awards.csv -->
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Systems and methods for predicting bacteriophage host range</h3>
+                            <h4 class="h6 mb-0 text-secondary">World Intellectual Property Organization (WIPO)</h4>
+                        </div>
+                        <span class="year-pill">2024 · PCT/IB2023/054805</span>
+                    </div>
+                    <p class="text-secondary small mb-2 mt-1">
+                        Camejo P., <b>León L.</b>, et al. Machine learning models and genomic feature matrices predicting strain-specific phage infections.
+                    </p>
+                    <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2024231715" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> View WIPO Filing
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Method and system for characterization of female reproductive system-related conditions</h3>
+                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                        </div>
+                        <span class="year-pill">2021 · US11001900B2 (Granted)</span>
+                    </div>
+                    <p class="text-secondary small mb-2 mt-1">
+                        Z Apte, E Bik, SW Bird, <b>LE León</b>, PA Nieto, V Alegria-Mera, C Bravo, et al. High-throughput sequencing diagnostic platform.
+                    </p>
+                    <a href="https://patents.google.com/patent/US11001900B2/en" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Normalization for sequencing libraries</h3>
+                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                        </div>
+                        <span class="year-pill">2019 · US20190078085A1</span>
+                    </div>
+                    <p class="text-secondary small mb-2 mt-1">
+                        Z Apte, J Richman, D Almonacid, E Morales, R Ortiz, N Ordenes, J Jiménez, C Bravo, N Scioscia, E Olivares, <b>Luis León</b>, et al.
+                    </p>
+                    <a href="https://patents.google.com/patent/US20190078085A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Single molecule sequencing and unique molecular identifiers</h3>
+                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                        </div>
+                        <span class="year-pill">2019 · US20190136310A1</span>
+                    </div>
+                    <p class="text-secondary small mb-2 mt-1">
+                        Z Apte, J Richman, D Almonacid, E Morales, <b>L León</b>, SW Bird, J Ugalde. Advanced molecular barcoding for accurate sequencing counts.
+                    </p>
+                    <a href="https://patents.google.com/patent/US20190136310A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1" style="color: var(--heading-color);">Method and system for library preparation with unique molecular identifiers</h3>
+                            <h4 class="h6 mb-0 text-secondary">United States Patent and Trademark Office (USPTO)</h4>
+                        </div>
+                        <span class="year-pill">2018 · US20180362967A1</span>
+                    </div>
+                    <p class="text-secondary small mb-2 mt-1">
+                        Z Apte, J Richman, D Almonacid, J Jimenez, R Ortiz, E Morales, Nicolas Ordenes, <b>Luis León</b>. Library preparation methods.
+                    </p>
+                    <a href="https://patents.google.com/patent/US20180362967A1/en" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> View Patent Details
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; [Year] Luis E. León | <a href="https://github.com/leleonp" class="text-white">GitHub</a></p>
-  </footer>
+    <!-- Awards & Fellowships Section -->
+    <section>
+        <h2 class="h4 fw-bold mb-3" style="color: var(--heading-color);">
+            <i class="bi bi-patch-check me-2" style="color: var(--accent-color);"></i>Academic Honors & Fellowships
+        </h2>
 
-  <script src="scripts/utils.js"></script>
-  
-  <script src="scripts/csv_loader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-mic"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Genetics (SOCHIGEN)</h4>
+                        </div>
+                        <span class="year-pill">2015</span>
+                    </div>
+                    <p class="text-secondary small mb-0 mt-1">
+                        Awarded for highest scientific merit at the XLVIII Annual Meeting of the Chilean Society of Genetics.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-award"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Ph.D. Thesis Completion Scholarship</h3>
+                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">CONICYT-Chile (ANID)</h4>
+                        </div>
+                        <span class="year-pill">2012</span>
+                    </div>
+                    <p class="text-secondary small mb-0 mt-1">
+                        National competitive grant for final-stage doctoral thesis execution and publication.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-mic"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Biochemistry and Molecular Biology</h4>
+                        </div>
+                        <span class="year-pill">2011</span>
+                    </div>
+                    <p class="text-secondary small mb-0 mt-1">
+                        Recognized at the XXXIV Annual Meeting of the Chilean Society of Biochemistry and Molecular Biology.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-award"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">National Ph.D. Scholarship</h3>
+                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">CONICYT-Chile (ANID)</h4>
+                        </div>
+                        <span class="year-pill">2008 – 2011</span>
+                    </div>
+                    <p class="text-secondary small mb-0 mt-1">
+                        Full fellowship supporting doctoral studies in Molecular Genetics and Microbiology at PUC Chile.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="d-flex flex-column flex-sm-row align-items-start gap-3">
+                <div class="award-icon-box">
+                    <i class="bi bi-mic"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h3 class="h5 fw-bold mb-0" style="color: var(--heading-color);">Best Oral Presentation</h3>
+                            <h4 class="h6 mb-0" style="color: var(--accent-color); font-weight: 600;">Chilean Society of Reproduction and Development</h4>
+                        </div>
+                        <span class="year-pill">2006</span>
+                    </div>
+                    <p class="text-secondary small mb-0 mt-1">
+                        Awarded at the XVII Annual Meeting of the Chilean Society of Reproduction and Development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0 small">&copy; 2026 Luis E. León, Ph.D. | <a href="https://github.com/leleonp" class="text-white text-decoration-underline">GitHub</a></p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

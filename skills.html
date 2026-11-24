@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>leleonp.github.io</title>
+    <title>Luis E. León, Ph.D. | Skills & Competencies</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX0ZJB4HHR"></script>
@@ -16,29 +14,82 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-MX0ZJB4HHR');
     </script>
+    <style>
+      .page-header-banner {
+        padding: 30px 0 25px 0;
+        border-bottom: 1px solid var(--card-border);
+        margin-bottom: 35px;
+      }
+      .skill-category-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      }
+      .skill-item-box {
+        background: var(--pill-bg);
+        border: 1px solid var(--pill-border);
+        border-radius: 12px;
+        padding: 16px 12px;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .skill-item-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+        border-color: var(--accent-color);
+        background: #ffffff;
+      }
+      .skill-item-box img {
+        height: 44px;
+        width: 44px;
+        object-fit: contain;
+      }
+      .skill-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--heading-color);
+      }
+      .soft-skill-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-left: 4px solid var(--accent-color) !important;
+        border-radius: 12px;
+        padding: 18px 20px;
+        height: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .soft-skill-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      }
+    </style>
 </head>
 <body>
-
+    
 <div id="navbar"></div>
 <script>
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
-      
-      // Set active nav link after navbar is loaded
       const navLinks = document.querySelectorAll('.nav-link');
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-
+      const currentPath = window.location.pathname.split('/').pop() || 'skills.html';
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
-        
         const linkPath = href.replace('./', '');
-        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+        if (linkPath === currentPath || linkPath === 'skills.html') {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
@@ -48,182 +99,231 @@
 </script>
 
 <div class="container mb-5">
-    <!-- Profile Header -->
-    <header class="text-center mb-5">
-        <div class="d-flex flex-column align-items-center">
-            <figure class="mb-3">
-                <img src="img/profile_picture.jpeg" alt="Profile picture" class="rounded-circle" width="100" height="100">
-            </figure>
-            <h1>Luis E. León Ph.D.</h1>
-            <h2>Computational Biologist · Bioinformatician · Data Scientist</h2>
-        </div>
-    </header>
+    <!-- Modern Page Header Banner -->
+    <div class="page-header-banner">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge" style="background: var(--accent-subtle); color: var(--accent-color); font-weight: 600;">
+          <i class="bi bi-tools me-1"></i> Technical Stack
+        </span>
+        <span class="text-secondary small">Competencies & Methods</span>
+      </div>
+      <h1 class="h2 fw-bold mb-1" style="color: var(--heading-color);">Skills & Technical Expertise</h1>
+      <p class="text-secondary mb-0">
+        Languages, bioinformatics workflows, cloud infrastructure, and leadership capabilities.
+      </p>
+    </div>
 
-    <!-- Soft Skills Section -->
+    <!-- Technical Skills Section -->
     <section class="mb-5">
-        <h2 class="mb-4">Soft Skills</h2>
-        <div class="card">
-            <div class="card-body">
-                <ul class="mb-0" style="list-style-type: none;">
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Effective communication:</b> Ability to convey scientific results and complex concepts clearly and accurately to both technical and non-technical audiences, fostering a comprehensive understanding of laboratory objectives and advancements.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Teamwork:</b> Experience collaborating with interdisciplinary teams, promoting an inclusive and respectful environment to maximize efficiency in scientific and operational projects.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Leadership and project management:</b> Proven competence in leading scientific teams, efficiently allocating resources and tasks to ensure deadlines and strategic objectives are met.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Problem-solving:</b> Analytical and evidence-based approach to identifying and addressing experimental challenges, proposing innovative solutions to optimize processes and outcomes.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Adaptability:</b> Ability to effectively respond to changes in priorities, adjusting plans and strategies to ensure success in dynamic and demanding environments.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Strategic thinking:</b> Experience integrating scientific knowledge into experiment planning and laboratory management, aligning scientific activities with organizational and quality objectives.
-                    </li>
-                    <li><span class="text-primary fs-4 align-middle">●</span>
-                        <b>Training and mentoring:</b> Skill in training and guiding technical and operational teams, promoting professional development and encouraging the adoption of good scientific and regulatory practices.
-                    </li>
-                </ul>
+        <h2 class="h4 fw-bold mb-3" style="color: var(--heading-color);">
+            <i class="bi bi-cpu me-2" style="color: var(--accent-color);"></i>Technical Competencies
+        </h2>
+
+        <!-- Languages & Pipelines -->
+        <div class="skill-category-card">
+            <h3 class="h6 fw-bold text-uppercase text-secondary mb-3" style="letter-spacing: 0.05em;">
+                Core Languages & Pipeline Orchestration
+            </h3>
+            <div class="row g-3">
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/python.jpeg" alt="Python">
+                        <div class="skill-name">Python</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/r.jpeg" alt="R">
+                        <div class="skill-name">R / Bioconductor</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/nextflow.png" alt="Nextflow">
+                        <div class="skill-name">Nextflow DSL2</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/bash.png" alt="Bash">
+                        <div class="skill-name">Bash & Linux HPC</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud, Containers & DevOps -->
+        <div class="skill-category-card">
+            <h3 class="h6 fw-bold text-uppercase text-secondary mb-3" style="letter-spacing: 0.05em;">
+                Cloud, Containers & DevOps
+            </h3>
+            <div class="row g-3">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/aws.png" alt="AWS">
+                        <div class="skill-name">AWS Batch / S3</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/docker.png" alt="Docker">
+                        <div class="skill-name">Docker</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/gh_actions.png" alt="CI/CD">
+                        <div class="skill-name">GitHub Actions</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/git.png" alt="Git">
+                        <div class="skill-name">Git</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/gh.png" alt="GitHub">
+                        <div class="skill-name">GitHub</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Databases & Data Management -->
+        <div class="skill-category-card">
+            <h3 class="h6 fw-bold text-uppercase text-secondary mb-3" style="letter-spacing: 0.05em;">
+                Databases & Data Management
+            </h3>
+            <div class="row g-3">
+                <div class="col-6 col-sm-4 col-md-4">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/postgresql.png" alt="PostgreSQL">
+                        <div class="skill-name">PostgreSQL</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-4">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/mysql.png" alt="MySQL">
+                        <div class="skill-name">MySQL</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-4">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/sql.jpeg" alt="SQL">
+                        <div class="skill-name">SQL Modeling</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reporting, Frameworks & Web -->
+        <div class="skill-category-card">
+            <h3 class="h6 fw-bold text-uppercase text-secondary mb-3" style="letter-spacing: 0.05em;">
+                Interactive Reporting & Web Frameworks
+            </h3>
+            <div class="row g-3">
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/streamlit.png" alt="Streamlit">
+                        <div class="skill-name">Streamlit</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/quarto.png" alt="Quarto">
+                        <div class="skill-name">Quarto</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/rmarkdwon.png" alt="Rmarkdown">
+                        <div class="skill-name">RMarkdown</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/shiny.jpeg" alt="Shiny">
+                        <div class="skill-name">Shiny (R)</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/html5.png" alt="HTML5">
+                        <div class="skill-name">HTML5</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/css.png" alt="CSS">
+                        <div class="skill-name">CSS3</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/sass.png" alt="Sass">
+                        <div class="skill-name">Sass / SCSS</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <div class="skill-item-box">
+                        <img src="./img/programming/bootstrap.png" alt="Bootstrap">
+                        <div class="skill-name">Bootstrap 5</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
+    <!-- Leadership & Soft Skills Section -->
     <section>
-        <h2 class="mb-4">Technical Skills</h2>
-        
-        <!-- Programming Skills -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Programming Skills</h3>
-                <div class="row text-center">
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/python.jpeg" width="50" alt="Python">
-                        <div>Python</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/r.jpeg" width="50" alt="R">
-                        <div>R</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/nextflow.png" width="50" alt="Nextflow">
-                        <div>Nextflow</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/bash.png" width="50" alt="Bash">
-                        <div>Bash</div>
-                    </div>
+        <h2 class="h4 fw-bold mb-3" style="color: var(--heading-color);">
+            <i class="bi bi-people me-2" style="color: var(--accent-color);"></i>Leadership & Professional Strengths
+        </h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-chat-left-text text-primary me-2"></i>Effective Communication</h4>
+                    <p class="small text-secondary mb-0">Ability to convey complex genomic results and statistical models clearly to technical peers, physicians, and executive stakeholders.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Data Management and Databases -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Data Management and Databases</h3>
-                <div class="row text-center">
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/postgresql.png" width="50" alt="PostgreSQL">
-                        <div>PostgreSQL</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/mysql.png" width="50" alt="MySQL">
-                        <div>MySQL</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/sql.jpeg" width="50" alt="SQL">
-                        <div>SQL</div>
-                    </div>
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-diagram-3 text-success me-2"></i>Leadership & Team Management</h4>
+                    <p class="small text-secondary mb-0">Proven track record directing multidisciplinary groups of bioinformaticians, data scientists, and molecular biologists to meet ambitious deadlines.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Web & Data Visualization Frameworks -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Web & Data Visualization Frameworks</h3>
-                <div class="row text-center">
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/streamlit.png" width="50" alt="Streamlit">
-                        <div>Streamlit</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/quarto.png" width="50" alt="Quarto">
-                        <div>Quarto</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/rmarkdwon.png" width="50" alt="Rmarkdown">
-                        <div>Rmarkdown</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/shiny.jpeg" width="50" alt="Shiny">
-                        <div>Shiny</div>
-                    </div>
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-check2-circle text-info me-2"></i>Evidence-Based Problem Solving</h4>
+                    <p class="small text-secondary mb-0">Methodical approach to experimental roadblocks, designing benchmark controls and innovative algorithmic remedies.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Cloud and DevOps -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Cloud and DevOps</h3>
-                <div class="row text-center">
-                    <div class="col-6 col-md-2 mb-3">
-                        <img src="./img/programming/aws.png" width="50" alt="AWS">
-                        <div>AWS</div>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <img src="./img/programming/docker.png" width="50" alt="Docker">
-                        <div>Docker</div>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <img src="./img/programming/gh_actions.png" width="50" alt="CI/CD">
-                        <div>CI/CD</div>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <img src="./img/programming/git.png" width="50" alt="Git">
-                        <div>Git</div>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <img src="./img/programming/gh.png" width="50" alt="GitHub">
-                        <div>GitHub</div>
-                    </div>
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-compass text-warning me-2"></i>Strategic Research Alignment</h4>
+                    <p class="small text-secondary mb-0">Aligning experimental laboratory pipelines with organizational patent strategies, intellectual property assets, and regulatory standards.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Web development technologies -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Web Development Technologies</h3>
-                <div class="row text-center">
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/html5.png" width="50" alt="HTML5">
-                        <div>HTML</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/css.png" width="50" alt="CSS">
-                        <div>CSS</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/sass.png" width="50" alt="Sass">
-                        <div>Sass</div>
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="./img/programming/bootstrap.png" width="50" alt="Bootstrap">
-                        <div>Bootstrap</div>
-                    </div>
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-person-workspace text-danger me-2"></i>Mentorship & Talent Development</h4>
+                    <p class="small text-secondary mb-0">Active mentor guiding junior bioinformaticians and graduate students in code hygiene, reproducibility, and best statistical practices.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="soft-skill-card">
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--heading-color);"><i class="bi bi-arrow-repeat text-secondary me-2"></i>Adaptability & Agility</h4>
+                    <p class="small text-secondary mb-0">Rapidly adapting to evolving computational technologies, wet-lab assay shifts, and dynamic industry requirements.</p>
                 </div>
             </div>
         </div>
     </section>
 </div>
 
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 Luis E. León | <a href="https://github.com/leleonp" class="text-white">GitHub</a></p>
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0 small">&copy; 2026 Luis E. León, Ph.D. | <a href="https://github.com/leleonp" class="text-white text-decoration-underline">GitHub</a></p>
 </footer>
 
 <!-- Bootstrap JS Bundle -->
